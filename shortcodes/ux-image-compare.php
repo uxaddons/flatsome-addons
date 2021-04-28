@@ -127,13 +127,13 @@ add_shortcode("ux_addons_image_compare", "ux_addons_compare");
 
 
 function custom_script_style_adding_function() {
- wp_enqueue_style( 'ux-style', plugins_url() . '/ux-flatsome-addons/assets/css/twentytwenty.css', array(), '1.0.0', 'all' );
+wp_enqueue_style( 'ux-style', UX_Flatsome_Addons_URL . 'css/twentytwenty.css', array(), '1.0.0', 'all' );
 }
 add_action( 'wp_enqueue_scripts', 'custom_script_style_adding_function' ); 
 
 function ux_addons_scripts() {
-  wp_enqueue_script( 'main-js', plugins_url() . '/ux-flatsome-addons/assets/js/jquery.event.move.js', array(), '1.0.0', 'all' );
-  wp_enqueue_script( 'main-js-ux', plugins_url() . '/ux-flatsome-addons/assets/js/jquery.twentytwenty.js', array(), '1.0.0', 'all' );
+  wp_enqueue_script( 'main-js', UX_Flatsome_Addons_URL . 'js/jquery.event.move.js', array(), '1.0.0', 'all' );
+  wp_enqueue_script( 'main-js-ux', UX_Flatsome_Addons_URL . 'js/jquery.twentytwenty.js', array(), '1.0.0', 'all' );
 }
 add_action( 'wp_enqueue_scripts', 'ux_addons_scripts' );
 

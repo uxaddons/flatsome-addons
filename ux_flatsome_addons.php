@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
 }
 
 define('UX_Flatsome_Addons_DIR', plugin_dir_path(__FILE__));
-define('UX_Flatsome_Addons_URL', plugins_url('/', __FILE__));
+define('UX_Flatsome_Addons_URL', plugin_dir_url( __FILE__ ) . 'assets/');
 
 class UX_Flatsome_Addons
 {
