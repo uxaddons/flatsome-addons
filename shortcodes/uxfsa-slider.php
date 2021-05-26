@@ -1,5 +1,5 @@
 <?php
-function ux_addons_image( $atts, $content = null ) {
+function uxfsa_addons_image( $atts, $content = null ) {
 	extract( shortcode_atts( array(
 		'_id'             => 'image_' . rand(),
 		'id'              => '',
@@ -163,11 +163,11 @@ function ux_addons_image( $atts, $content = null ) {
 	return $content;
 }
 
-add_shortcode( 'ux_addons_image', 'ux_addons_image' );
+add_shortcode( 'uxfsa_addons_image', 'uxfsa_addons_image' );
 
 
 
-function ux_addons_shortcode_ux_slider($atts, $content=null) {
+function uxfsa_addons_shortcode_ux_slider($atts, $content=null) {
 
     extract( shortcode_atts( array(
         '_id' => 'uxaddons-'.rand(),
@@ -269,7 +269,7 @@ function ux_addons_shortcode_ux_slider($atts, $content=null) {
     );
 ?>
 
-<div class="uxaddons_tgdd slider-wrapper relative <?php echo $visibility; ?>" id="<?php echo $_id; ?>" <?php echo get_shortcode_inline_css($css_args); ?>>
+<div class="uxfsa_addons_slider slider-wrapper relative <?php echo $visibility; ?>" id="<?php echo $_id; ?>" <?php echo get_shortcode_inline_css($css_args); ?>>
     <div class="uxaddons-main <?php echo $classes; ?>"
         data-flickity-options='{
             "cellAlign": "<?php echo $slide_align; ?>",
@@ -331,18 +331,18 @@ function ux_addons_shortcode_ux_slider($atts, $content=null) {
     return $content;
 
 }
-add_shortcode("ux_addons_slider_flatsome", "ux_addons_shortcode_ux_slider");
+add_shortcode("uxfsa_addons_slider_flatsome", "uxfsa_addons_shortcode_ux_slider");
 
-add_action( 'wp_footer', 'ux_slider_tgdd_scripts' );
-function ux_slider_tgdd_scripts(){
+add_action( 'wp_footer', 'uxfsa_slider_scripts' );
+function uxfsa_slider_scripts(){
 ?>
 <script type="text/javascript">
   var html ='';
-  jQuery('.uxaddons_tgdd .TextCaption').each(function(){
+  jQuery('.uxfsa_addons_slider .TextCaption').each(function(){
     var currentElement = jQuery(this);
     html += '<div class="col large-3 medium-4 small-6 item">' + currentElement.html() + '</div>';
   });
-  jQuery('.uxaddons_tgdd .TextCaptions').html(html);
+  jQuery('.uxfsa_addons_slider .TextCaptions').html(html);
 </script>
 
 <?php

@@ -1,5 +1,5 @@
 <?php
-function title_with_cat_shortcode( $atts, $content = null )
+function uxfsa_title_with_cat_shortcode( $atts, $content = null )
     {
         extract( shortcode_atts( array(
             '_id' => 'title-'.rand(),
@@ -77,4 +77,4 @@ function title_with_cat_shortcode( $atts, $content = null )
         <span class="title-show-cats">'.$title_html_show_cat.'</span><b></b>'.$link_output.'</' . $tag_name .'></div><!-- .section-title -->';
     }
 
-add_shortcode( 'title_with_cat', 'title_with_cat_shortcode' );
+add_shortcode( 'uxfsa_title_with_cat', 'uxfsa_title_with_cat_shortcode' );

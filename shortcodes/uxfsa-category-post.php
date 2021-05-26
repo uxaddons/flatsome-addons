@@ -1,5 +1,5 @@
 <?php
-function title_with_cat_posts_shortcode( $atts, $content = null ) {
+function uxfsa_title_with_cat_posts_shortcode( $atts, $content = null ) {
   extract( shortcode_atts( array(
         'title'       => '',
         'title_small' => '',
@@ -121,4 +121,4 @@ $args = array(
     return $content;
 }
 
-add_shortcode( 'title_with_cat_posts', 'title_with_cat_posts_shortcode' );
+add_shortcode( 'uxfsa_title_with_cat_posts', 'uxfsa_title_with_cat_posts_shortcode' );

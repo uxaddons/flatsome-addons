@@ -20,13 +20,13 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-define('UX_Flatsome_Addons_DIR', plugin_dir_path(__FILE__));
-define('UX_Flatsome_Addons_URL', plugin_dir_url( __FILE__ ) . 'assets/');
+define('UXFSA_Flatsome_Addons_DIR', plugin_dir_path(__FILE__));
+define('UXFSA_Flatsome_Addons_URL', plugin_dir_url( __FILE__ ) . 'assets/');
 
-class UX_Flatsome_Addons
+class UXFSA_Flatsome_Addons
 {
     /**
-     * UX_Flatsome_Addons constructor.
+     * UXFSA_Flatsome_Addons constructor.
      */
     public function __construct()
     {
@@ -39,21 +39,21 @@ class UX_Flatsome_Addons
     }
     public function ux_builder_element()
     {
-        include(UX_Flatsome_Addons_DIR . '/builder/ux-count-number.php' );
-        include(UX_Flatsome_Addons_DIR . '/builder/ux-category-post.php' );
-        include(UX_Flatsome_Addons_DIR . '/builder/ux-slider.php' );
-        include(UX_Flatsome_Addons_DIR . '/builder/ux-flatsome-title-category.php' );
-        include(UX_Flatsome_Addons_DIR . '/builder/ux-image-compare.php' );
+        include(UXFSA_Flatsome_Addons_DIR . '/builder/uxfsa-count-number.php' );
+        include(UXFSA_Flatsome_Addons_DIR . '/builder/uxfsa-category-post.php' );
+        include(UXFSA_Flatsome_Addons_DIR . '/builder/uxfsa-slider.php' );
+        include(UXFSA_Flatsome_Addons_DIR . '/builder/uxfsa-flatsome-title-category.php' );
+        include(UXFSA_Flatsome_Addons_DIR . '/builder/uxfsa-image-compare.php' );
     }
 }
-function UX_Flatsome_Addons_Start()
+function UXFSA_Flatsome_Addons_Start()
 {
-    new UX_Flatsome_Addons();
+    new UXFSA_Flatsome_Addons();
 }
-add_action('after_setup_theme', 'UX_Flatsome_Addons_Start');
+add_action('after_setup_theme', 'UXFSA_Flatsome_Addons_Start');
 
-require_once (UX_Flatsome_Addons_DIR. '/shortcodes/ux-count-number.php');
-require_once (UX_Flatsome_Addons_DIR. '/shortcodes/ux-category-post.php');
-require_once (UX_Flatsome_Addons_DIR. '/shortcodes/ux-slider.php');
-require_once (UX_Flatsome_Addons_DIR. '/shortcodes/ux-flatsome-title-category.php');
-require_once (UX_Flatsome_Addons_DIR. '/shortcodes/ux-image-compare.php');
+require_once (UXFSA_Flatsome_Addons_DIR. '/shortcodes/uxfsa-count-number.php');
+require_once (UXFSA_Flatsome_Addons_DIR. '/shortcodes/uxfsa-category-post.php');
+require_once (UXFSA_Flatsome_Addons_DIR. '/shortcodes/uxfsa-slider.php');
+require_once (UXFSA_Flatsome_Addons_DIR. '/shortcodes/uxfsa-flatsome-title-category.php');
+require_once (UXFSA_Flatsome_Addons_DIR. '/shortcodes/uxfsa-image-compare.php');

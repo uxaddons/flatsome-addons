@@ -1,12 +1,12 @@
 <?php
-add_ux_builder_shortcode( 'ux_addons_image_compare', array(
+add_ux_builder_shortcode( 'uxfsa_addons_slider_flatsome', array(
     'type' => 'container',
-    'name' => __( 'UX Image Compare' ),
+    'name' => __( 'UX Addons Slider' ),
     'category' => __( 'UX-Addons.com' ),
     'message' => __( 'Add slides here' ),
     'directives' => array( 'uxaddons-slider' ),
-    'allow' => array( 'ux_addons_image'),
-    'thumbnail' => UX_Flatsome_Addons_URL.'builder/thumbnails/ux_addons_image_compare.jpg',
+    'allow' => array( 'uxfsa_addons_image'),
+    'thumbnail' => UXFSA_Flatsome_Addons_URL.'thumbnails/uxfsa_slider.jpg',
     'wrap'   => false,
     'info' => '{{ label }}',
     'priority' => -1,
@@ -284,9 +284,6 @@ add_ux_builder_shortcode( 'ux_addons_image_compare', array(
     ),
 ) );
 
-
-
-
 $position_options = require( __DIR__ . '/commons/position.php' );
 $position_options['options']['position_x']['on_change'] = array(
   'recompile' => false,
@@ -297,17 +294,17 @@ $position_options['options']['position_y']['on_change'] = array(
   'class' => 'y{{ value }} md-y{{ value }} lg-y{{ value }}'
 );
 
-add_ux_builder_shortcode( 'ux_addons_image', array(
+add_ux_builder_shortcode( 'uxfsa_addons_image', array(
     'name' => __( 'UX Image', 'ux-builder'),
     'category' => __( 'UX-Addons.com' ),
     'toolbar_thumbnail' => 'id',
-    'thumbnail' =>  UX_Flatsome_Addons_URL.'builder/thumbnails/ux_image.jpg',
+    'thumbnail' =>  UXFSA_Flatsome_Addons_URL.'thumbnails/uxfsa_image.jpg',
     'wrap' => false,
 
     'presets' => array(
         array(
             'name' => __( 'Blank' ),
-            'content' => '[ux_addons_image][/ux_addons_image]',
+            'content' => '[uxfsa_addons_image][/uxfsa_addons_image]',
         ),
     ),
 

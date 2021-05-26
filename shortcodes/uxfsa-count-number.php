@@ -1,5 +1,5 @@
 <?php
-function ux_counter_number( $atts, $content = null ) {
+function uxfsa_counter_number( $atts, $content = null ) {
 	extract( shortcode_atts( array(
 		'title'       => '',
 		'title_small' => '',
@@ -96,10 +96,10 @@ function ux_counter_number( $atts, $content = null ) {
 	return $content;
 }
 
-add_shortcode( 'ux_counter_number', 'ux_counter_number' );
+add_shortcode( 'uxfsa_counter_number', 'uxfsa_counter_number' );
 
-add_action( 'wp_footer', 'ux_counter_number_scripts' );
-function ux_counter_number_scripts(){
+add_action( 'wp_footer', 'uxfsa_counter_number_scripts' );
+function uxfsa_counter_number_scripts(){
 ?>
 <script>
 var counted = 0;

@@ -1,9 +1,9 @@
 <?php 
-add_ux_builder_shortcode('title_with_cat', array(
+add_ux_builder_shortcode('uxfsa_title_with_cat_posts', array(
     'type' => 'container',
-    'name' => __( 'UX Title Category Product' ),
+    'name' => __( 'UX Title Cat Posts' ),
     'category' => __( 'UX-Addons.com' ),
-    'thumbnail' => UX_Flatsome_Addons_URL.'builder/thumbnails/title_with_cat.jpg',
+    'thumbnail' => UXFSA_Flatsome_Addons_URL.'thumbnails/uxfsa_title_with_cat_posts.jpg',
     'wrap'   => false,
     'info' => '{{ label }}',
     'priority' => -1,
@@ -13,25 +13,43 @@ add_ux_builder_shortcode('title_with_cat', array(
                     'heading' => 'Categories',
                     'param_name' => 'ids',
                     'config' => array(
-                        'multiple' => true,
+                        'multiple' => false,
                         'placeholder' => 'Select...',
                         'termSelect' => array(
-                            'post_type' => 'product_cat',
-                            'taxonomies' => 'product_cat'
+                            'post_type' => 'post',
+                            'taxonomies' => 'category'
                         )
                     )
                 ),
-                'style' => array(
-                    'type'    => 'select',
-                    'heading' => 'Style',
-                    'default' => 'normal',
-                    'options' => array(
-                        'normal'      => 'Normal',
-                        'center'      => 'Center',
-                        'bold'        => 'Left Bold',
-                        'bold-center' => 'Center Bold',
-                    ),
+              'img'         => array(
+                'type'    => 'image',
+                'heading' => 'Icon',
+                'value'   => '',
+            ),
+            'width' => array(
+            'type'    => 'scrubfield',
+            'heading' => __( 'Width' ),
+            'default' => '',
+            'min'     => 0,
+            'max'     => 1200,
+            'step'    => 5,
+        ),
+        'pos'         => array(
+                'type'      => 'select',
+                'heading'   => 'Icon Position',
+                'default'   => 'top',
+                'options'   => array(
+                    'top'    => 'Top',
+                    'center' => 'Center',
+                    'left'   => 'Left',
+                    'right'  => 'Right',
                 ),
+            ),
+            'icon' => array(
+            'type'    => 'select',
+            'heading' => 'Icon',
+            'options' => require( __DIR__ . '/values/icons.php' ),
+        ),
                 'text' => array(
                     'type'       => 'textfield',
                     'heading'    => 'Title',

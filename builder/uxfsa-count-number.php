@@ -1,9 +1,9 @@
 <?php
-add_ux_builder_shortcode( 'ux_counter_number', array(
+add_ux_builder_shortcode( 'uxfsa_counter_number', array(
     'type' => 'container',
     'name' => __( 'UX Counter Number' ),
     'category' => __( 'UX-Addons.com' ),
-    'thumbnail' => UX_Flatsome_Addons_URL.'builder/thumbnails/ux_counter_number.jpg',
+    'thumbnail' => UXFSA_Flatsome_Addons_URL.'thumbnails/uxfsa_counter_number.jpg',
     'wrap'   => false,
     'info' => '{{ label }}',
     'priority' => -1,
